@@ -13,7 +13,7 @@ import {UserFeedback} from "../user-feedback.model";
 })
 export class BookListComponent implements OnInit {
   books: Book[] = [];
-  newBook: Book = { title: '', author: '' }; // Initialize a new book object
+  newBook: Book = { title: '', author: '' };
 
   constructor(private bookService: BookService,
               public dialog: MatDialog,
@@ -35,8 +35,8 @@ export class BookListComponent implements OnInit {
 
   addBook() {
     this.bookService.addBook(this.newBook).subscribe((book) => {
-        this.books.push(book); // Add the newly created book to the list
-        this.newBook = { title: '', author: ''}; // Reset the form
+        this.books.push(book);
+        this.newBook = { title: '', author: ''};
       },
       (error) => {
         this.openDialog(error.error);
@@ -47,9 +47,6 @@ export class BookListComponent implements OnInit {
     this.bookService.deleteBook(id ?? 0).subscribe(
       () => {
         this.loadBooks();
-      },
-      (error) => {
-        this.openDialog(error.error);
       }
     );
   }
