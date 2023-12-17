@@ -1,0 +1,17 @@
+<!-- Improved dialog HTML -->
+<h2 mat-dialog-title>The request you are trying to send is failed. Please provide a valid problem description</h2>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field class="dialog-form-field">
+    <input matInput placeholder="Your Name" [(ngModel)]="name">
+  </mat-form-field>
+  <mat-form-field class="dialog-form-field">
+    <input matInput placeholder="Your Email" [(ngModel)]="email">
+  </mat-form-field>
+  <mat-form-field class="dialog-form-field">
+    <textarea matInput placeholder="Describe the issue" [(ngModel)]="comment"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="dialog-cancel-button" (click)="onNoClick()">Cancel</button>
+  <button mat-button class="dialog-submit-button" (click)="onYesClick()">Submit</button>
+</div>

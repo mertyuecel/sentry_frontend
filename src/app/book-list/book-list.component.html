@@ -1,0 +1,33 @@
+<!-- book-list.component.html -->
+
+<div class="book-list-container">
+
+  <div class="book-list">
+    <table class="book-table">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let book of books">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td><button class="delete-button" (click)="deleteBook(book.id)">Delete</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="add-book-form">
+    <!-- Form to add a new book -->
+    <form (ngSubmit)="addBook()">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="newBook.title" required>
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" [(ngModel)]="newBook.author" required>
+
+      <button type="submit" class="add-button">Add Book</button>
+    </form>
+  </div>
+
+</div>

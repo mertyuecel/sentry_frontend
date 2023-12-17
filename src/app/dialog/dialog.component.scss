@@ -1,0 +1,60 @@
+/* Improved dialog SCSS */
+.dialog-title {
+  font-size: 8px;
+  color: #333;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dialog-cancel-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+.dialog-submit-button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.dialog-cancel-button, .dialog-submit-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dialog-cancel-button:hover {
+  background-color: #aaa;
+}
+
+.dialog-submit-button:hover {
+  background-color: #0056b3;
+}
+
+.mat-dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto; /* Set bottom to 'auto' to avoid conflicting with Angular Material's default styling */
+  transform: translateY(0%);
+  max-height: 100%; /* Ensure the dialog doesn't exceed the height of the viewport */
+}

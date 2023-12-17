@@ -1,0 +1,98 @@
+.book-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  height: 100vh;
+}
+
+.book-list {
+  width: 500px;
+}
+
+.add-book-form {
+  width: 500px;
+}
+
+.book-list-header {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.book-table th, .book-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.book-table th {
+  background: #007bff;
+  color: #fff;
+}
+
+.book-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.book-table tr:hover {
+  background-color: #d2e8f7;
+  cursor: pointer;
+}
+
+.delete-button {
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #ff1a1a;
+}
+
+
+/* Fancy styles for input fields Add Book*/
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 16px;
+
+}
+
+.add-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #0056b3;
+}
