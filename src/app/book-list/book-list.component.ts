@@ -37,10 +37,7 @@ export class BookListComponent implements OnInit {
     this.bookService.addBook(this.newBook).subscribe((book) => {
         this.books.push(book);
         this.newBook = { title: '', author: ''};
-      },
-      (error) => {
-        this.openDialog(error.error);
-      });
+      },);
   }
 
   deleteBook(id: number | undefined) {
